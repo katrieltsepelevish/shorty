@@ -1,0 +1,31 @@
+{
+    "name": "shorty",
+    "version": "1.0.0",
+    "description": "URL shortening service",
+    "main": "server.js",
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "start": "node server.js",
+        "server": "nodemon server.js --ignore client",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "prettier:run": "prettier --write .",
+        "prettier:check": "prettier --check ."
+    },
+    "author": "Katriel Tsepelevish <katriel.tsepelevish@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^6.2.1",
+        "nodemon": "^2.0.12",
+        "prettier": "^2.4.1"
+    },
+    "dependencies": {
+        "colors": "^1.4.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mongoose": "^6.0.7",
+        "morgan": "^1.10.0",
+        "shortid": "^2.2.16",
+        "valid-url": "^1.0.9"
+    }
+}
